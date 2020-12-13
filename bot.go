@@ -20,7 +20,7 @@ func main() {
 		return c.String(http.StatusOK, "Hello, World!")
 
 	})
-	e.POST("/hello", func(c echo.Context) error {
+	e.POST("/api/bot", func(c echo.Context) error {
 		r:=c.Request()
 		w:=c.Response()
 		events, err := bot.ParseRequest(r)
